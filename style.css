@@ -1,0 +1,293 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: #111;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #1e90ff;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #111;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1e90ff;
+}
+
+.hero-img img {
+  width: 280px;
+  border-radius: 50%;
+  border: 5px solid #111;
+}
+
+/* About Section */
+.about {
+  background: #ffffff;
+}
+
+.about-card {
+  max-width: 900px;
+  margin: 40px auto 0;
+  background: #f9f9f9;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  animation: fadeInUp 1s ease;
+}
+
+.about-card p {
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.about-card i {
+  font-size: 1.3rem;
+  color: #1e90ff;
+  margin-top: 5px;
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 25px;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .about-card i {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    padding: 20px;
+  }
+
+  .about-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .about-card i {
+    font-size: 1rem;
+  }
+}
+
+
+/* Highlight keywords */
+.highlight {
+  color: #1e90ff;
+  font-weight: 600;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Section Styling */
+.section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skills-grid span {
+  background: #111;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #1e90ff;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  max-width: 420px;   /* hard limit */
+  border-radius: 10px;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .project-img {
+    width: 90%;
+    margin: 0 auto 15px;
+    display: block;
+  }
+}
+
+/* Laptop and larger screens */
+@media (min-width: 1024px) {
+  .project-img {
+    width: 80%;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  .project-img {
+    width: 70%;
+  }
+}
+
+
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+}
