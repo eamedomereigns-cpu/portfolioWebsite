@@ -1,3 +1,6 @@
+/*Logging visitors details such as the browser, OS for analytic purpose*/
+/*I'm aware of the token MY_SECRET_KEY_123 */
+
 async function logVisitor() {
   const userAgent = navigator.userAgent;
 
@@ -31,7 +34,6 @@ async function logVisitor() {
     token: "MY_SECRET_KEY_123"
   };
 
-  // Replace with your Apps Script Web App URL
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwT7Vu9T4dKONvnF_LqgC_aBSo5c5bDaCwun7oRaJkybHnbVf_LeQi1SInrlWOpzfft8w/exec"
 
   await fetch(SCRIPT_URL, {
@@ -43,10 +45,8 @@ async function logVisitor() {
   });
 }
 
-// Run when page loads
 window.addEventListener("load", logVisitor);
 
-// Mobile menu toggle
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav-links');
 
@@ -54,12 +54,11 @@ toggle.addEventListener('click', () => {
   nav.classList.toggle('active');
 });
 
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
     document.querySelector(this.getAttribute('href'))
       .scrollIntoView({ behavior: 'smooth' });
-    nav.classList.remove('active'); // close mobile menu after click
+    nav.classList.remove('active'); 
   });
 });
