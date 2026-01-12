@@ -2,6 +2,7 @@
 /*I'm aware of the token MY_SECRET_KEY_123 */
 
 async function logVisitor() {
+  console.log("Visitor logger loaded");
   const userAgent = navigator.userAgent;
 
   function detectBrowser() {
