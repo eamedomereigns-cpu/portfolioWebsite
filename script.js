@@ -39,6 +39,7 @@ async function logVisitor() {
 
   await fetch(SCRIPT_URL, {
     method: "POST",
+    mode: "no-cors",
     body: JSON.stringify(payload),
     headers: {
       "Content-Type": "application/json"
