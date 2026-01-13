@@ -44,6 +44,16 @@ window.addEventListener("load", logVisitor);
 //Contact form
 //Takes the name, email and message from visitors
 document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+
+    // Animate hamburger into X
+    menuToggle.classList.toggle("open");
+  });
+
     emailjs.init("GDpfl5AdCIJ0SRQEV"); 
 
     const contactForm = document.getElementById("contact-form");
@@ -82,3 +92,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
