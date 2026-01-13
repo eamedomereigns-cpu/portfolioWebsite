@@ -195,47 +195,95 @@ body {
   font-size: 0.9rem;
 }
 
-/* Projects Grid */
+.projects {
+  padding: 80px 10%;
+  background: #f9fafb;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #111;
+}
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  margin-top: 40px;
 }
 
 .project-card {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  transition: 0.3s;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.12);
 }
 
-.project-card img {
+.project-image img {
   width: 100%;
-  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
   margin-bottom: 15px;
 }
 
-.project-card a {
-  text-decoration: none;
-  color: #1e90ff;
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.project-img {
-  width: 100%;
-  height: auto;
-  max-width: 420px;   /* hard limit */
-  border-radius: 10px;
-  margin: 0 auto 15px;
-  display: block;
+.project-tech span {
+  background: #111;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
 }
+
+.project-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  border: 2px solid #111;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  background: #111;
+  color: #fff;
+}
+
 
 /* Tablet */
 @media (min-width: 768px) {
@@ -291,3 +339,72 @@ footer {
     display: flex;
   }
 }
+
+.contact {
+  padding: 80px 10%;
+  background: #fff;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+#contact-form {
+  background: #f9fafb;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #111;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #333;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #111;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.form-message.success {
+  color: green;
+}
+
+.form-message.error {
+  color: red;
+}
+

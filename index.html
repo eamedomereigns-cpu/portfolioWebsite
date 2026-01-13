@@ -26,7 +26,7 @@
   <section class="hero">
     <div class="hero-text">
       <h1>Hi, I'm Emmanuel 👋</h1>
-      <p>Software Developer: ML & AI Enthusiast</p>
+      <p>AI Engineer | Machine Learning | Full-Stack Developer</p>
       <a href="#projects" class="btn">View My Work</a>
     </div>
     <div class="hero-img">
@@ -80,30 +80,97 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="assets/ProjectManagement.jpg" alt="Project One" class="project-img">
-        <h3>Project One</h3>
-        <p>This simple web app built with HTML, CSS, and JS.</p>
-        <a href="project.html">View Project</a>
+  <section class="projects" id="projects">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+    <h3>Soon to be published projects</h3>
+    <!-- Project Card -->
+    <div class="project-card">
+      <div class="project-image">
+        <!--<img src="images/phishing-ai.jpg" alt="AI Phishing Detection">-->
       </div>
-      <!-- Add more projects here -->
+
+      <div class="project-content">
+        <h3>AI Phishing Detection System</h3>
+        <p>
+          Machine learning system that detects phishing URLs with high accuracy using
+          classification algorithms and feature engineering.
+        </p>
+
+        <div class="project-tech">
+          <span>Python</span>
+          <span>Scikit-learn</span>
+          <span>Flask</span>
+        </div>
+
+        <div class="project-links">
+          <!--<a href="https://github.com/yourusername/phishing-detector" target="_blank">GitHub</a>
+          <a href="https://phishing-demo.netlify.app" target="_blank">Live Demo</a>-->
+        </div>
+      </div>
     </div>
-  </section>
+
+    <!-- Project Card -->
+    <div class="project-card">
+      <div class="project-image">
+        <!--<img src="images/ids-ai.jpg" alt="AI Intrusion Detection">-->
+      </div>
+
+      <div class="project-content">
+        <h3>AI Intrusion Detection System</h3>
+        <p>
+          Intelligent IDS that detects network anomalies using machine learning and
+          behavioral analysis.
+        </p>
+
+        <div class="project-tech">
+          <span>Python</span>
+          <span>TensorFlow</span>
+          <span>Cybersecurity</span>
+        </div>
+
+        <div class="project-links">
+          <!--<a href="https://github.com/yourusername/ai-ids" target="_blank">GitHub</a>
+          <a href="#" target="_blank">Live Demo</a>-->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <p>Email: eamedomereigns@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/eamedomereigns-cpu" target="_blank">github.com/eamedomereigns-cpu </a></p>
-  </section>
+  <section class="contact" id="contact">
+  <h2 class="section-title">Contact Me</h2>
+
+  <div class="contact-container">
+    <form id="contact-form">
+      <div id="form-message" class="form-message"></div>
+      <div class="input-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="input-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="input-group">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
   <footer>
     <p>© 2026 Emmanuel. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="/script.js"></script>
+
 </body>
 </html>

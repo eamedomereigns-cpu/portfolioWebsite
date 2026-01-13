@@ -1,3 +1,6 @@
+//Was trying to log visitor agents for analytic purpose 
+//but seem to only work with desktop browsers but not smartphones
+
 function logVisitor() {
   const ua = navigator.userAgent;
 
@@ -36,5 +39,46 @@ function logVisitor() {
     .catch(err => console.error(err));
 }
 
-// Log visitor on page load
 window.addEventListener("load", logVisitor);
+
+//Contact form
+//Takes the name, email and message from visitors
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("GDpfl5AdCIJ0SRQEV"); 
+
+    const contactForm = document.getElementById("contact-form");
+    const formMessage = document.getElementById("form-message");
+
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const submitButton = contactForm.querySelector("button[type='submit']");
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        emailjs.sendForm("service_vu88c1b", "template_7kagaxz", this)
+            .then(function () {
+                formMessage.textContent = "Message sent successfully!";
+                formMessage.classList.add("success");
+                formMessage.classList.remove("error");
+
+                contactForm.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
+
+                // hide message after 5 seconds
+                setTimeout(() => formMessage.textContent = "", 5000);
+            }, function (error) {
+                console.error("EmailJS Error:", error);
+                formMessage.textContent = "Failed to send message. Please try again.";
+                formMessage.classList.add("error");
+                formMessage.classList.remove("success");
+
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
+
+                // hide message after 5 seconds
+                setTimeout(() => formMessage.textContent = "", 5000);
+            });
+    });
+});
