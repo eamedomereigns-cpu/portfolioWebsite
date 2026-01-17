@@ -1,5 +1,4 @@
-//Was trying to log visitor agents for analytic purpose 
-//but seem to only work with desktop browsers but not smartphones
+//Log visitor agents for analytic purpose 
 
 function logVisitor() {
   const ua = navigator.userAgent;
